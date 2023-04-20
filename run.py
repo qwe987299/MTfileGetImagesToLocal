@@ -33,7 +33,7 @@ def main(input_file):
     # Find all image URLs and download them
     img_urls = []
     for line in lines:
-        matches = re.findall(r'<img src="(.*?)"/>', line)
+        matches = re.findall(r'<img\s.*?src="(.*?)".*?/>', line)
         for match in matches:
             img_urls.append(match)
 
